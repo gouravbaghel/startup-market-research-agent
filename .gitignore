@@ -1,6 +1,7 @@
-# Virtual environment
+# Virtual environments
 myvenv/
 venv/
+.venv/
 
 # Secrets
 .env
@@ -9,8 +10,9 @@ venv/
 __pycache__/
 *.pyc
 
-# VS Code
+# IDE
 .vscode/
+.idea/
 
 # Generated reports
-*.md
+report_*.md
