@@ -4,15 +4,15 @@ from typing import TypedDict, List, Optional, Literal
 from dotenv import load_dotenv
 from pydantic import BaseModel, Field
 import markdown2
-from langchain_groq import ChatGroq
+from langchain_openai import ChatOpenAI
 from langchain_core.messages import HumanMessage, SystemMessage
 from langchain_tavily import TavilySearch
 from langgraph.graph import StateGraph, START, END
 
 load_dotenv()
 
-llm  = ChatGroq(model="meta-llama/llama-4-scout-17b-16e-instruct")
-tool = TavilySearch(max_results=2)
+llm  = ChatOpenAI(model="gpt-4o-mini")
+tool = TavilySearch(max_results=5)
 
 # ──────────────────────────────────────────────
 #  Schemas
